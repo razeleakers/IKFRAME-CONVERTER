@@ -229,7 +229,7 @@ namespace IKFRAME_CONVERTER
 
                             for (int j = 0; j < colors[i].Count; j++)
                             {
-                                RTB_Content.AppendText($"{sectionName}-{partName}={acc}&'{colors[i][j].R / 255f},{colors[i][j].G / 255f},{colors[i][j].B / 255f}'+" + "\n");
+                                RTB_Content.AppendText($"{sectionName}-{partName}={acc}&'{colors[i][j].R},{colors[i][j].G},{colors[i][j].B}'+" + "\n");
 
                                 acc++;
                             }
@@ -246,7 +246,7 @@ namespace IKFRAME_CONVERTER
                             {
                                 Color color = bp.GetPixel(x, y);
 
-                                RTB_Content.AppendText($"{sectionName}-{partName}={acc}&'{color.R / 255f},{color.G / 255f},{color.B / 255f}'+" + "\n");
+                                RTB_Content.AppendText($"{sectionName}-{partName}={acc}&'{color.R},{color.G},{color.B}'+" + "\n");
 
                                 acc++;
                             }

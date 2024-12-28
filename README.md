@@ -5,12 +5,12 @@
 
 Programa encargado de extraer y leer los <a href="https://www.w3schools.com/colors/colors_rgb.asp">Colores RGB</a> de una skin de <a href="https://minecraft.net/">Minecraft</a>
 
-Necesitaras despues mi plugin <a href="https://github.com/razeleakers/IKFRAME-CREATOR">IKFRAME-CREATOR</a> para poder convertir los datos de la skin que conseguiste a <a href="https://www.roblox.com/">Roblox</a>
+Necesitaras despues mi plugin <a href="https://github.com/razeleakers/IKFRAME-CREATOR">IKFRAME-CREATOR</a> para poder importar los datos de la skin a <a href="https://www.roblox.com/">Roblox</a>
 
 Tomar en cuenta:
 
 - Una skin puede tener 2 capas, de las cuales el programa solo podra leer la capa principal
-- La skin que quieras convertir debe tener un tamaño 64x64 y ser del tipo Classic
+- La skin que quieras convertir debe tener un tamaño 64x64 pixeles y ser del tipo Classic
 
 <img src="/images/preview.png" alt="preview">
 

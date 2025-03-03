@@ -90,7 +90,9 @@ namespace IKFRAME_CONVERTER
 
                         if (CB_LeftArm.Checked) dw.CutAndSaveImage(BodyPart.LEFT_ARM, new Rectangle(32, 48, 16, 16));
 
-                        return dw.GetDrawData();
+                        string data = dw.GetDrawData();
+
+                        return (data == string.Empty) ? "select" : data;
                     }
                 }
                 else
@@ -103,8 +105,9 @@ namespace IKFRAME_CONVERTER
 
             task.ContinueWith((t) =>
             {
-                if (task.Result != string.Empty) RTB_Content.Text = task.Result;
-                else MessageBox.Show("The image must be 64 x 64 pixels", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (task.Result == "select") MessageBox.Show("Select a part!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (task.Result != string.Empty) RTB_Content.Text = task.Result;
+                else MessageBox.Show("The image must be 64 x 64 pixels!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 CB_Head.Enabled = true;
                 CB_Torso.Enabled = true;

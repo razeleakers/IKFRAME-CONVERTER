@@ -80,15 +80,32 @@ namespace IKFRAME_CONVERTER.Drawing
 
                 int acc = 1;
 
-                for (int y = 0; y < bp.Height; y++)
+                if (face == "Bottom")
                 {
-                    for (int x = 0; x < bp.Width; x++)
+                    for (int y = bp.Height - 1; y >= 0; y--)
                     {
-                        Color color = bp.GetPixel(x, y);
+                        for (int x = 0; x < bp.Width; x++)
+                        {
+                            Color color = bp.GetPixel(x,y);
 
-                        sb.AppendLine($"{section}-{face}={acc}&'{color.R},{color.G},{color.B}'+");
+                            sb.AppendLine($"{section}-{face}={acc}&'{color.R},{color.G},{color.B}'+");
 
-                        acc++;
+                            acc++;
+                        }
+                    }
+                }
+                else
+                {
+                    for (int y = 0; y < bp.Height; y++)
+                    {
+                        for (int x = 0; x < bp.Width; x++)
+                        {
+                            Color color = bp.GetPixel(x, y);
+
+                            sb.AppendLine($"{section}-{face}={acc}&'{color.R},{color.G},{color.B}'+");
+
+                            acc++;
+                        }
                     }
                 }
             }

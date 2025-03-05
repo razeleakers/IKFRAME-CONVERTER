@@ -1,6 +1,6 @@
 ﻿namespace IKFRAME_CONVERTER.Drawing
 {
-    public readonly struct BodyPartData
+    public struct BodyPartData
     {
         public int PosX { get; }
         public int PosY { get; }
